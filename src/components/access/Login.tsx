@@ -7,12 +7,18 @@ import Register from "./Register";
 import Input from "../elements/CustomInput";
 
 import backgroundLight from "../../assets/img/backgroundLIGHT.png";
-import logoKanary from "../../assets/img/logoKanarySemFundo.png";
+import logoKanary from "../../assets/img/logoKanaryBlack.png";
 
 export function Login() {
   const [isLoginVisible, setIsLoginVisible] = useState(true);
   const [isRecoveryPassVisible, setIsRecoveryPassVisible] = useState(false);
   const [isRegisterVisible, setIsRegisterVisible] = useState(false);
+
+  const [formData, setFormData] = useState({email: "", password: ""});
+  const handleFormSubmit = () => { 
+    console.log('envie essas informações para o servidor'); 
+    console.log(formData);
+  };
 
   return (
     <>
@@ -42,11 +48,11 @@ export function Login() {
               }`}
             >
               <div className=" w-[650px] h-[620px] bg-linear-to-t from-white to-sky-300 rounded-[3rem] ring-1 ring-white flex flex-col items-center shadow-x1/30">
-                <div className="flex flex-col items-center m-[100px]">
+                <div className="flex flex-col items-center h-full justify-center">
                   <img
                     src={logoKanary}
                     alt="logolight"
-                    className="w-50 h-30 rounded-xl"
+                    className="w-[194px] h-[62px]"
                   />
                   <div className="w-[100%] text-center flex flex-col">
                     <h1 className="font-bold text-2xl">Login com seu e-mail</h1>
@@ -55,17 +61,19 @@ export function Login() {
                       Produtividade simples, equipes mais fortes. <br />{" "}
                       Eficiência de graça!{" "}
                     </p>
-                    <form action="#" className="flex flex-col">
+                    <form action={handleFormSubmit} className="flex flex-col">
                       <Input
                         type="Email"
                         name="email"
                         placeholder="E-mail"
+                        onchange={(e) => setFormData({...formData, email: e.target.value})}
                         Icon={<SlEnvolope />}
                       />
                       <Input
                         type="Password"
                         name="password"
                         placeholder="Senha"
+                        onchange={(e) => setFormData({...formData, password: e.target.value})}
                         Icon={<SlLock />}
                       />
                       <p
@@ -73,7 +81,7 @@ export function Login() {
                           setIsRecoveryPassVisible(!isRecoveryPassVisible);
                           setIsLoginVisible(!isLoginVisible);
                         }}
-                        className="text-xs font-thin self-end mb-5 mt-[-10px] hover:underline cursor-pointer"
+                        className="text-xs font-thin self-end mb-3 mt-[-10px] hover:underline cursor-pointer"
                       >
                         Esqueci minha senha
                       </p>
@@ -84,7 +92,7 @@ export function Login() {
                         setIsRegisterVisible(!isRegisterVisible);
                         setIsLoginVisible(!isLoginVisible);
                       }}
-                      className="text-xs font-thin self-center  mt-2 "
+                      className="text-xs font-thin self-center mt-2 "
                     >
                       Ainda sem cadastro?{" "}
                       <span className="cursor-pointer hover:underline font-bold">

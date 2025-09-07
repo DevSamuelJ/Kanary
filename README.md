@@ -31,6 +31,7 @@ Documentação do Projeto:
 - **Autenticação**: JWT (JSON Web Tokens)
 - **API**: RESTful
 
+=======
 ## Imagens reais do projeto
 
 ### Tela de Login do Usuário
@@ -55,8 +56,6 @@ Documentação do Projeto:
   <li>npm install</li>
   <li>npm run dev</li>
 </ol>
-
-
 
 ### Observações Adicionais
 - O sistema deve priorizar **usabilidade**, **acessibilidade** e **performance**.
