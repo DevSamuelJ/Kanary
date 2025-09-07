@@ -33,11 +33,19 @@ Documentação do Projeto:
 
 ## Imagens reais do projeto
 
-### TELA DE LOGIN DE USUÁRIO
+### Tela de Login do Usuário
 
-                            TEMA LIGHT                                                      TEMA DARK
-<img width="1653" height="1174" alt="Image" src="https://github.com/user-attachments/assets/6563f485-6ad0-464c-bb44-d42d76b8073b" />
-
+<table align="center">
+  <tr>
+    <th align="center">Tema Light</th>
+    <th align="center">Tema Dark</th>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <img src="https://github.com/user-attachments/assets/6563f485-6ad0-464c-bb44-d42d76b8073b" alt="Imagem da tela de login do Kanary nos modos claro e escuro" width="100%">
+    </td>
+  </tr>
+</table>
 
 ## Execução de testes
 ### Caso queira revisar o código ou até mesmo enviar um pr, use os comandos abaixo:
