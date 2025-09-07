@@ -13,7 +13,10 @@ import logoKanary from "../../assets/img/logoKanarySemFundo.png";
 export function Login() {
   const [isLoginVisible, setIsLoginVisible] = useState(true);
   const [isRecoveryPassVisible, setIsRecoveryPassVisible] = useState(false);
-  const [isRegisterVisible, setIsRegisterVisible] = useState(false)
+  const [isRegisterVisible, setIsRegisterVisible] = useState(false);
+
+  const [formData, setFormData] = useState({email: "", password: ""});
+  const handleFormSubmit = () => { console.log('envie essas informações para o servidor'); console.log(formData);};
 
   return (
     <>
@@ -27,12 +30,12 @@ export function Login() {
                 <div className="w-[100%] text-center flex flex-col">
                   <h1 className="font-bold text-2xl">Login com seu e-mail</h1>
                   <p className="font-thin text-base mb-5"> Produtividade simples, equipes mais fortes. <br /> Eficiência de graça! </p>
-                  <form action="#" className="flex flex-col">
-                    <Input type="Email" name="email" placeholder="E-mail" Icon={<SlEnvolope/>} />
-                    <Input type="Password" name="password" placeholder="Senha" Icon={ <SlLock/> } />
-                    <p onClick={() => { setIsRecoveryPassVisible(!isRecoveryPassVisible); setIsLoginVisible(!isLoginVisible); }} 
-                      className="text-xs font-thin self-end mb-5 mt-[-10px] hover:underline cursor-pointer">
-                      Esqueci minha senha
+                  <form action={handleFormSubmit} className="flex flex-col">
+                    <Input type="Email" name="email" placeholder="E-mail" onchange={(e) => { setFormData({ ...formData, email: e.target.value });}} Icon={<SlEnvolope/>} />
+                    <Input type="Password" name="password" placeholder="Senha" onchange={(e) => { setFormData({ ...formData, password: e.target.value });}} Icon={ <SlLock/> } />
+                    <p 
+                      onClick={() => { setIsRecoveryPassVisible(!isRecoveryPassVisible); setIsLoginVisible(!isLoginVisible); }} 
+                      className="text-xs font-thin self-end mb-5 mt-[-10px] hover:underline cursor-pointer"> Esqueci minha senha
                     </p>
                     <CustomButton label="Login" />
                   </form>

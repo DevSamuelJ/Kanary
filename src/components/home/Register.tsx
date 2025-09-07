@@ -1,4 +1,5 @@
 import { SlEnvolope, SlLock, SlUser, SlArrowLeftCircle } from "react-icons/sl";
+import { useState } from "react";
 import CustomButton from "../CustomButton";
 import backgroundLight from "../../assets/img/backgroundLIGHT.png";
 import logoKanary from "../../assets/img/logoKanarySemFundo.png";
@@ -10,6 +11,10 @@ export default function Register({children, isRegisterVisible, handleBack}:{
     isRegisterVisible: boolean;
     handleBack: () => void; 
 }) {
+
+  const [formData, setFormData] = useState({user:"", email: "", password:"", confirmPassword:""});
+  const handleFormSubmit = () => { console.log('envie essas informações para o servidor'); console.log(formData);};
+  
   return (
     <>
       <div className="bg-cover bg-center h-screen" style={{ backgroundImage: `url(${backgroundLight})` }}>
@@ -21,19 +26,19 @@ export default function Register({children, isRegisterVisible, handleBack}:{
               <div className="w-[100%] text-center flex flex-col">
                 <h1 className="font-bold text-2xl">Cadastre o seu usuario!</h1>
                 <p className="font-thin text-base mb-5">Entre e seja mais um entre nossos mais de <b>mil</b> usuários.</p>
-                <form action="#" className="flex flex-col">
+                <form action={handleFormSubmit} className="flex flex-col">
 
                   {/* div para input de usuario */}
-                  <Input type="Text" name="user" placeholder="Nome de usuário" Icon = {<SlUser/>} />
+                  <Input type="Text" name="user" placeholder="Nome de usuário" onchange={(e) => setFormData({...formData, user: e.target.value})} Icon = {<SlUser/>} />
 
                   {/* div para input de email */}
-                  <Input type="Email" name="email" placeholder="Email para cadastro"  Icon = {<SlEnvolope/>} />
+                  <Input type="Email" name="email" placeholder="Email para cadastro" onchange={(e) => setFormData({...formData, email: e.target.value})}  Icon = {<SlEnvolope/>} />
 
                   {/* div para input de senha */}
-                  <Input type="Password" name="password" placeholder="Senha de cadastro" Icon = {<SlLock/>} />
+                  <Input type="Password" name="password" placeholder="Senha de cadastro" onchange={(e) => setFormData({...formData, password: e.target.value})} Icon = {<SlLock/>} />
 
                   {/* div para input da confirmação de senha */}
-                  <Input type="Password"  name="confirmPassword" placeholder="Confirme a senha digitada" Icon = {<SlLock/>} />
+                  <Input type="Password"  name="confirmPassword" placeholder="Confirme a senha digitada" onchange={(e) => setFormData({...formData, confirmPassword: e.target.value})} Icon = {<SlLock/>} />
 
                   <CustomButton label="Cadastrar usuário" />
                 </form>
