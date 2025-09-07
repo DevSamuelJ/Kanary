@@ -31,7 +31,6 @@ Documentação do Projeto:
 - **Autenticação**: JWT (JSON Web Tokens)
 - **API**: RESTful
 
-=======
 ## Imagens reais do projeto
 
 ### Tela de Login do Usuário
