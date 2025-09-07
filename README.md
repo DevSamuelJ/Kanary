@@ -31,7 +31,31 @@ Documentação do Projeto:
 - **Autenticação**: JWT (JSON Web Tokens)
 - **API**: RESTful
 
+=======
+## Imagens reais do projeto
 
+### Tela de Login do Usuário
+
+<table align="center">
+  <tr>
+    <th align="center">Tema Light</th>
+    <th align="center">Tema Dark</th>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <img src="https://github.com/user-attachments/assets/6563f485-6ad0-464c-bb44-d42d76b8073b" alt="Imagem da tela de login do Kanary nos modos claro e escuro" width="100%">
+    </td>
+  </tr>
+</table>
+
+## Execução de testes
+### Caso queira revisar o código ou até mesmo enviar um pr, use os comandos abaixo:
+
+<ol>
+  <li>git clone https://github.com/DevSamuelJ/Kanary.git</li>
+  <li>npm install</li>
+  <li>npm run dev</li>
+</ol>
 
 ### Observações Adicionais
 - O sistema deve priorizar **usabilidade**, **acessibilidade** e **performance**.
