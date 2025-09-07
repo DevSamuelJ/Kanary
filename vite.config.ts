@@ -4,8 +4,10 @@ import tailwindcss from "@tailwindcss/vite";
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: "/Kanary/", // importante pro GitHub Pages
   plugins: [react(), tailwindcss()],
   build: {
+    outDir: "docs", //  build vai gerar a pasta docs para a main
     rollupOptions: {
       output: {
         manualChunks: {

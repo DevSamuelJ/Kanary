@@ -1,4 +1,4 @@
-function Index() {
+function Board() {
 
 
   return (
@@ -52,4 +52,4 @@ function Index() {
   )
 }
 
-export default Index
+export default Board

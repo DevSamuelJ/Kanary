@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from "react";
 import { SlArrowLeftCircle, SlEnvolope} from "react-icons/sl";
 import Input from "./Input";
@@ -36,3 +37,5 @@ const RecoveryPass = ({ children,
 };
 
 export default RecoveryPass;
+=======
+>>>>>>> ddde23208d38e5bff598cd6511c295de0c94df8f

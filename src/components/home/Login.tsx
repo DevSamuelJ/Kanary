@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from "react";
 import { SlEnvolope, SlLock } from "react-icons/sl";
 
@@ -53,3 +54,5 @@ export function Login() {
     </>
   );
 }
+=======
+>>>>>>> ddde23208d38e5bff598cd6511c295de0c94df8f
