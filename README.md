@@ -1,5 +1,10 @@
 Documentação do Projeto:
 
+![Human Made](https://img.shields.io/badge/Human%20Made-100%25-brightgreen?style=flat-square&logo=github)
+![No AI](https://img.shields.io/badge/No%20AI-Human%20Crafted%20Code-orange?style=flat&logo=user&logoColor=white)
+
+> **Nota:** Este projeto foi desenvolvido inteiramente por desenvolvedores humanos, sem uso de inteligência artificial para geração de código.
+
 # Kanary
 
 ## Projeto de gestão de equipes, projetos e tarefas.
