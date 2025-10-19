@@ -36,7 +36,7 @@ public class UsuariosController {
         usuariosService.excluirPorId(id);
     }
 
-    @PutMapping("/id")
+    @PutMapping("/{id}")
     public Usuarios atualizarUsuario(@PathVariable Long id, @Valid @RequestBody UsuariosDTO usuarioDTO) {
         Usuarios usuarios = new Usuarios(); // transformando DTO em entidade
         usuarios.setNome(usuarioDTO.getNome());
