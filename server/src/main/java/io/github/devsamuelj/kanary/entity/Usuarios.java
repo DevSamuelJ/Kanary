@@ -20,20 +20,23 @@ public class Usuarios {
     @Column(nullable = false, length = 255)
     private String senha;
 
+    @Column(nullable = true)
+    @Enumerated(EnumType.STRING)
+    private EnumTipo tipo;
 
-    public  Usuarios(){}
-    public Usuarios(Long id, String nome, String email, String senha){
+
+    public Usuarios(){}
+    public Usuarios(Long id, String nome, String email, String senha, EnumTipo tipo){
         this.id = id;
         this.nome = nome;
         this.email = email;
         this.senha = senha;
-
+        this.tipo = tipo;
     }
 
     public Long getId() {
         return id;
     }
-
     public void setId(Long id) {
         this.id = id;
     }
@@ -41,7 +44,6 @@ public class Usuarios {
     public String getNome() {
         return nome;
     }
-
     public void setNome(String nome) {
         this.nome = nome;
     }
@@ -49,7 +51,6 @@ public class Usuarios {
     public String getEmail() {
         return email;
     }
-
     public void setEmail(String email) {
         this.email = email;
     }
@@ -57,8 +58,10 @@ public class Usuarios {
     public String getSenha() {
         return senha;
     }
-
     public void setSenha(String senha) {
         this.senha = senha;
     }
+
+    public EnumTipo getTipo() { return tipo; }
+    public void setTipo(EnumTipo tipo) { this.tipo = tipo; }
 }

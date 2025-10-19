@@ -1,6 +1,6 @@
 package io.github.devsamuelj.kanary.entity;
 
-public enum Tipo {
+public enum EnumTipo {
     LIDER,
-    COLADBORADOR
+    COLABORADOR
 }
