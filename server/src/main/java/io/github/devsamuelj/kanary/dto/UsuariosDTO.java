@@ -13,7 +13,7 @@ public class UsuariosDTO {
     private String email;
 
     @NotBlank(message = "Digite uma senha.")
-    @Size(min = 2, max = 20, message = "A senha deve ter entre 8 e 20 caracteres.")
+//    @Size(min = 8, max = 20, message = "A senha deve ter entre 8 e 20 caracteres.")
 //    @Pattern(
 //            regexp = "^(?=.*[A-Z])(?=.*[a-z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{8,}$",
 //            message = "A senha deve conter letras maiúsculas, minúsculas, números e caracteres especiais."

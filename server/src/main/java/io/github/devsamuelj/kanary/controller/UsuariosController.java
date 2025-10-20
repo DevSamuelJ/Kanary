@@ -5,7 +5,6 @@ import io.github.devsamuelj.kanary.entity.Usuarios;
 import io.github.devsamuelj.kanary.service.UsuariosService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -24,12 +23,12 @@ public class UsuariosController {
 
     @PostMapping
     public Usuarios criarUsuario(@Valid @RequestBody UsuariosDTO usuarioDTO) {
-        Usuarios usuario = new Usuarios(); // transformando DTO em entidade
-        usuario.setNome(usuarioDTO.getNome());
-        usuario.setEmail(usuarioDTO.getEmail());
-        usuario.setSenha(usuario.getSenha());
-        usuario.setTipo(usuarioDTO.getTipo());
-        return usuariosService.criar(usuario);
+        Usuarios usuarios = new Usuarios(); // transformando DTO em entidade
+        usuarios.setNome(usuarioDTO.getNome());
+        usuarios.setEmail(usuarioDTO.getEmail());
+        usuarios.setSenha(usuarioDTO.getSenha());
+        usuarios.setTipo(usuarioDTO.getTipo());
+        return usuariosService.criar(usuarios);
     }
 
     @DeleteMapping("/{id}")
@@ -37,13 +36,13 @@ public class UsuariosController {
         usuariosService.excluirPorId(id);
     }
 
-    @PutMapping("/id")
+    @PutMapping("/{id}")
     public Usuarios atualizarUsuario(@PathVariable Long id, @Valid @RequestBody UsuariosDTO usuarioDTO) {
-        Usuarios usuario = new Usuarios(); // transformando DTO em entidade
-        usuario.setNome(usuarioDTO.getNome());
-        usuario.setEmail(usuarioDTO.getEmail());
-        usuario.setSenha(usuarioDTO.getSenha());
-        usuario.setTipo(usuarioDTO.getTipo());
-        return usuariosService.atualizar(id, usuario);
+        Usuarios usuarios = new Usuarios(); // transformando DTO em entidade
+        usuarios.setNome(usuarioDTO.getNome());
+        usuarios.setEmail(usuarioDTO.getEmail());
+        usuarios.setSenha(usuarioDTO.getSenha());
+        usuarios.setTipo(usuarioDTO.getTipo());
+        return usuariosService.atualizar(id, usuarios);
     }
 }

@@ -14,7 +14,10 @@ public class UsuariosService {
 
     @Autowired
     private UsuariosRepository usuariosRepository;
+
+    @Autowired
     private BCryptPasswordEncoder passwordEncoder;
+
 
     // listar todos os usuários
     public List<Usuarios> listarTodos() {
@@ -42,15 +45,15 @@ public class UsuariosService {
     public Usuarios atualizar(Long id, Usuarios usuarioAtualizado) {
         Optional<Usuarios> usuarioExistente = usuariosRepository.findById(id);
         if (usuarioExistente.isPresent()) {
-            Usuarios usuario = usuarioExistente.get();
-            usuario.setNome(usuarioAtualizado.getNome());
-            usuario.setEmail(usuarioAtualizado.getEmail());
+            Usuarios usuarios = usuarioExistente.get();
+            usuarios.setNome(usuarioAtualizado.getNome());
+            usuarios.setEmail(usuarioAtualizado.getEmail());
             if (usuarioAtualizado.getSenha() != null && !usuarioAtualizado.getSenha().isEmpty()) {
                 // Caso haja uma nova senha e ela não retorne null: atualize e criptografe a nova senha
-                usuario.setSenha(passwordEncoder.encode(usuarioAtualizado.getSenha()));
+                usuarios.setSenha(passwordEncoder.encode(usuarioAtualizado.getSenha()));
             }
-            usuario.setTipo(usuarioAtualizado.getTipo());
-            return usuariosRepository.save(usuario);
+            usuarios.setTipo(usuarioAtualizado.getTipo());
+            return usuariosRepository.save(usuarios);
         } else {
             return null;
         }
