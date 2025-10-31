@@ -30,7 +30,7 @@ export default function Register({
             : "hidden"
         }`}
       >
-        <div className=" w-[550px] h-[520px] bg-linear-to-t from-[#536493] via-[#7884b3] to-[#000F36] rounded-[3rem] ring-1 ring-white flex flex-col items-center shadow-x1/30">
+        <div className=" w-[550px] h-[520px] bg-linear-to-t from-[#1A4C84]/50 via-[#2C82BD]/50 to-[#00102B]/50 backdrop-blur-sm rounded-[3rem] ring-1 ring-white/40 flex flex-col items-center shadow-x1/30">
           <SlArrowLeftCircle
             className="text-white/50 size-7 mt-8 ml-8 self-start hover:text-white hover:cursor-pointer"
             onClick={() => {
