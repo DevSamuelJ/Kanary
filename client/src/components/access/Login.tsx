@@ -6,8 +6,8 @@ import RecoveryPass from "./RecoveryPass";
 import Register from "./Register";
 import Input from "../elements/CustomInput";
 
-import backgroundLight from "../../assets/img/backgroundLIGHT.png";
-import logoKanary from "../../assets/img/logoKanaryBlack.png";
+import backgroundDark from "../../assets/img/backgroundDARK.png";
+import logoKanary from "../../assets/img/logoKanaryWhite.png";
 
 export function Login() {
   const [isLoginVisible, setIsLoginVisible] = useState(true);
@@ -24,7 +24,7 @@ export function Login() {
     <>
       <div
         className="bg-cover bg-center h-screen"
-        style={{ backgroundImage: `url(${backgroundLight})` }}
+        style={{ backgroundImage: `url(${backgroundDark})` }}
       >
         <RecoveryPass
           isRecoveryPassVisible={isRecoveryPassVisible}
@@ -47,16 +47,16 @@ export function Login() {
                 : "hidden"
             }`}
           >
-            <div className=" w-[650px] h-[620px] bg-linear-to-t from-white to-sky-300 rounded-[3rem] ring-1 ring-white flex flex-col items-center shadow-x1/30">
+            <div className=" w-[550px] h-[520px] bg-linear-to-t from-[#536493] via-[#7884b3] to-[#000F36] rounded-[3rem] ring-1 ring-white/60 flex flex-col items-center">
               <div className="flex flex-col items-center h-full justify-center">
                 <img
                   src={logoKanary}
                   alt="logolight"
-                  className="w-[194px] h-[62px]"
+                  className="w-[180px] h-[62px]"
                 />
                 <div className="w-[100%] text-center flex flex-col">
-                  <h1 className="font-bold text-2xl">Login com seu e-mail</h1>
-                  <p className="font-thin text-base mb-5">
+                  <h1 className="font-bold text-2xl text-white">Login com seu e-mail</h1>
+                  <p className="font-thin text-base mb-5 text-white">
                     {" "}
                     Produtividade simples, equipes mais fortes. <br />{" "}
                     Eficiência de graça!{" "}
@@ -81,7 +81,7 @@ export function Login() {
                         setIsRecoveryPassVisible(!isRecoveryPassVisible);
                         setIsLoginVisible(!isLoginVisible);
                       }}
-                      className="text-xs font-thin self-end mb-3 mt-[-10px] hover:underline cursor-pointer"
+                      className="text-xs font-thin self-end mb-3 mt-[-10px] hover:underline cursor-pointer text-white"
                     >
                       Esqueci minha senha
                     </p>
@@ -92,7 +92,7 @@ export function Login() {
                       setIsRegisterVisible(!isRegisterVisible);
                       setIsLoginVisible(!isLoginVisible);
                     }}
-                    className="text-xs font-thin self-center mt-2 "
+                    className="text-xs font-thin self-center mt-2 text-white"
                   >
                     Ainda sem cadastro?{" "}
                     <span className="cursor-pointer hover:underline font-bold">
