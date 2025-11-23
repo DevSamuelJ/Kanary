@@ -1,7 +1,7 @@
 import { SlArrowLeftCircle, SlEnvolope } from "react-icons/sl";
 import { useState } from "react";
 import Input from "../elements/CustomInput";
-import logoKanary from "../../assets/img/logoKanaryBlack.png";
+import logoKanary from "../../assets/img/logoKanaryWhite.png";
 
 
 const RecoveryPass = ({
@@ -29,9 +29,9 @@ const RecoveryPass = ({
             : "hidden"
         }`}
       >
-        <div className="w-[650px] h-[620px] bg-linear-to-t from-white to-sky-300 rounded-[3rem] ring-1 ring-white flex flex-col items-center shadow-x1/30">
+        <div className="w-[550px] h-[520px] bg-linear-to-t from-[#1A4C84]/50 via-[#2C82BD]/50 to-[#00102B]/50 backdrop-blur-sm rounded-[3rem] ring-1 ring-white/40 flex flex-col items-center shadow-x1/30">
           <SlArrowLeftCircle
-            className="text-black/50 size-7 mt-8 ml-8 self-start hover:text-white hover:cursor-pointer"
+            className="text-white/50 size-7 mt-8 ml-8 self-start hover:text-white hover:cursor-pointer"
             onClick={() => {
               handleBack();
             }}
@@ -40,10 +40,10 @@ const RecoveryPass = ({
             <img
               src={logoKanary}
               alt="logolight"
-              className="w-[194px] h-[62px]"
+              className="w-[180px] h-[62px]"
             />
             <div className="w-[100%] text-center flex flex-col">
-              <h1 className="font-bold text-2xl mb-2">Recupere sua senha!</h1>
+              <h1 className="font-bold text-2xl mb-2 text-white">Recupere sua senha!</h1>
               <form action={handleFormSubmit} className="flex flex-col">
                 <Input
                   type="Email"

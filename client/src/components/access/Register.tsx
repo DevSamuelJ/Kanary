@@ -1,7 +1,7 @@
 import { SlEnvolope, SlLock, SlUser, SlArrowLeftCircle } from "react-icons/sl";
 import { useState } from "react";
 import CustomButton from "../elements/CustomButton";
-import logoKanary from "../../assets/img/logoKanaryBlack.png";
+import logoKanary from "../../assets/img/logoKanaryWhite.png";
 
 import Input from "../elements/CustomInput";
 
@@ -30,9 +30,9 @@ export default function Register({
             : "hidden"
         }`}
       >
-        <div className=" w-[650px] h-[620px] bg-linear-to-t from-white to-sky-300 rounded-[3rem] ring-1 ring-white flex flex-col items-center shadow-x1/30">
+        <div className=" w-[550px] h-[520px] bg-linear-to-t from-[#1A4C84]/50 via-[#2C82BD]/50 to-[#00102B]/50 backdrop-blur-sm rounded-[3rem] ring-1 ring-white/40 flex flex-col items-center shadow-x1/30">
           <SlArrowLeftCircle
-            className="text-black/50 size-7 mt-8 ml-8 self-start hover:text-white hover:cursor-pointer"
+            className="text-white/50 size-7 mt-8 ml-8 self-start hover:text-white hover:cursor-pointer"
             onClick={() => {
               handleBack();
             }}
@@ -41,11 +41,11 @@ export default function Register({
             <img
               src={logoKanary}
               alt="logolight"
-              className="w-[194px] h-[62px]"
+              className="w-[180px] h-[62px]"
             />
             <div className="w-[100%] text-center flex flex-col">
-              <h1 className="font-bold text-2xl">Cadastre o seu usuario!</h1>
-              <p className="font-thin text-base mb-5">
+              <h1 className="font-bold text-2xl text-white">Cadastre o seu usuario!</h1>
+              <p className="font-thin text-base mb-5 text-white">
                 Entre e seja mais um entre nossos mais de <b>mil</b> usuários.
               </p>
               <form action={handleFormSubmit} className="flex flex-col">
