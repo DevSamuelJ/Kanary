@@ -1,8 +1,7 @@
 import { SlArrowLeftCircle, SlEnvolope } from "react-icons/sl";
 import { useState } from "react";
-import Input from "../elements/CustomInput";
+import Input from "../ui/CustomInput";
 import logoKanary from "../../assets/img/logoKanaryWhite.png";
-
 
 const RecoveryPass = ({
   children,
@@ -13,10 +12,9 @@ const RecoveryPass = ({
   isRecoveryPassVisible: boolean;
   handleBack: () => void;
 }) => {
-
-  const [formData, setFormData] = useState({email: ""});
-  const handleFormSubmit = () => { 
-    console.log('envie essas informações para o servidor'); 
+  const [formData, setFormData] = useState({ email: "" });
+  const handleFormSubmit = () => {
+    console.log("envie essas informações para o servidor");
     console.log(formData);
   };
 
@@ -43,13 +41,17 @@ const RecoveryPass = ({
               className="w-[180px] h-[62px]"
             />
             <div className="w-[100%] text-center flex flex-col">
-              <h1 className="font-bold text-2xl mb-2 text-white">Recupere sua senha!</h1>
+              <h1 className="font-bold text-2xl mb-2 text-white">
+                Recupere sua senha!
+              </h1>
               <form action={handleFormSubmit} className="flex flex-col">
                 <Input
                   type="Email"
                   name="email"
                   placeholder="Digite o seu e-mail"
-                  onchange={(e) => setFormData({...formData, email: e.target.value})}
+                  onchange={(e) =>
+                    setFormData({ ...formData, email: e.target.value })
+                  }
                   Icon={<SlEnvolope />}
                 />
                 <button
