@@ -1,9 +1,9 @@
 import { SlEnvolope, SlLock, SlUser, SlArrowLeftCircle } from "react-icons/sl";
 import { useState } from "react";
-import CustomButton from "../ui/CustomButton";
-import logoKanary from "../../assets/img/logoKanaryWhite.png";
+import logoKanary from "../../assets/img/logoKanaryWhiteBig.png";
+import Input from "../../components/ui/CustomInput";
+import CustomButton from "../../components/ui/CustomButton";
 
-import Input from "../ui/CustomInput";
 
 export default function Register({
   children,

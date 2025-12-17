@@ -1,7 +1,7 @@
 import { BsArrowUpRightCircle, BsTrash } from "react-icons/bs";
-import { DashboardCard } from "../../../../components/ui/DashboardCard"
-import { IdentityMembersTeam } from "../../../../components/ui/IdentityMembersTeam";
 import { IoPersonCircleOutline } from "react-icons/io5";
+import { DashboardCard } from "../../components/ui/DashboardCard";
+import { IdentityMembersTeam } from "../../components/ui/IdentityMembersTeam";
 
 export const Dashboard = () => (
     <div className="h-full w-full pl-3.75">    
