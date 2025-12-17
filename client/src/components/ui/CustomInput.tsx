@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 
-function Input({type, name, placeholder, onchange, Icon }: {
+export function Input({type, name, placeholder, onchange, Icon }: {
     type: string
     name: string
     placeholder: string
@@ -23,12 +23,6 @@ function Input({type, name, placeholder, onchange, Icon }: {
                     {Icon}
                 </span>
             )}
-
         </div>
-
     )
-    
-
 }
-
-export default Input;

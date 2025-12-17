@@ -19,13 +19,13 @@ export const Header = () => {
             Sobre
           </a>
           <a
-            onClick={() => navigate("/login")}
-            className="hover:bg-gray-400/30 rounded-xl px-3 py-2">
+            onClick={() => navigate("./login")}
+            className="hover:bg-gray-400/30 rounded-xl px-3 py-2 cursor-pointer">
               Entrar
-            </a>
+          </a>
           <a
+            onClick={() => navigate("./register")}
             className="bg-gray-950 rounded-lg px-4 py-2 border border-blue-500 hover:bg-gray-800"
-            href=""
           >
             Criar Conta
           </a>
