@@ -25,7 +25,7 @@ export const Header = () => {
           </a>
           <a
             onClick={() => navigate("./register")}
-            className="bg-gray-950 rounded-lg px-4 py-2 border border-blue-500 hover:bg-gray-800"
+            className="bg-gray-950 rounded-lg px-4 py-2 border border-blue-500 hover:bg-gray-800 cursor-pointer"
           >
             Criar Conta
           </a>
