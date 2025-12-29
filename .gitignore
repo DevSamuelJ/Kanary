@@ -145,3 +145,10 @@ vite.config.ts.timestamp-*
 ./.vscode
 ./.idea
 .idea
+
+
+# deploy
+
+kanaryDeploy
+.kanaryDeploy
+./kanaryDeploy
