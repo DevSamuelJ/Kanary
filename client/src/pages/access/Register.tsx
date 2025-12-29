@@ -8,18 +8,61 @@ import { CustomButton } from "../../components/ui/CustomButton";
 export function Register() {
 
   const navigate = useNavigate();
+  const [message, setMessage] = useState("")
 
   const [formData, setFormData] = useState({
-    user: "",
+    nome: "",
     email: "",
-    password: "",
-    confirmPassword: "",
+    senha: "",
+    tipo: "COLABORADOR"
   });
 
-  const handleFormSubmit = () => {
+  const [confirmPass, setPass] = useState("")
+
+
+  // const handleFormSubmit = () => {
+  //   console.log("envie essas informações para o servidor");
+  //   console.log(formData);
+  // };
+
+    const handleFormSubmit = async () => {
     console.log("envie essas informações para o servidor");
     console.log(formData);
-  };
+
+    if (formData.senha === confirmPass){
+      setMessage("Logando...")
+      console.log(formData)
+      const url = "https://kanarybackend.discloud.app/usuarios";
+      await fetch(url, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData)
+      })
+    }else{
+      setMessage("A senhas não coincidem, tente novamente.")
+
+    }
+    
+
+
+  // const url = "https://kanarybackend.discloud.app/usuarios";
+  
+  // await fetch(url)
+  // .then(promisse => promisse.json())
+  // .then(data => console.log(data))
+
+
+    }
+
+
+
+
+
+
+
+
 
   return (
     <div className="bg-cover bg-center h-screen bg-[url(src/assets/img/backgroundDARK.png)]">
@@ -49,7 +92,7 @@ export function Register() {
                   name="user"
                   placeholder="Nome de usuário"
                   onchange={(e) =>
-                    setFormData({ ...formData, user: e.target.value })
+                    setFormData({ ...formData, nome: e.target.value })
                   }
                   Icon={<SlUser />}
                 />
@@ -68,10 +111,10 @@ export function Register() {
                 {/* div para input de senha */}
                 <Input
                   type="Password"
-                  name="password"
+                  name="senha"
                   placeholder="Senha de cadastro"
                   onchange={(e) =>
-                    setFormData({ ...formData, password: e.target.value })
+                    setFormData({ ...formData, senha: e.target.value })
                   }
                   Icon={<SlLock />}
                 />
@@ -82,14 +125,12 @@ export function Register() {
                   name="confirmPassword"
                   placeholder="Confirme a senha digitada"
                   onchange={(e) =>
-                    setFormData({
-                      ...formData,
-                      confirmPassword: e.target.value,
-                    })
+                    setPass(e.target.value)
                   }
                   Icon={<SlLock />}
                 />
                 <CustomButton children="Cadastrar usuário" />
+                <p>{message}</p>
               </form>
             </div>
           </div>
