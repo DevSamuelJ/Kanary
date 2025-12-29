@@ -29,6 +29,7 @@ export function Register() {
     console.log("envie essas informações para o servidor");
     console.log(formData);
 
+
     if (formData.senha === confirmPass){
       setMessage("Logando...")
       console.log(formData)
@@ -44,19 +45,15 @@ export function Register() {
       setMessage("A senhas não coincidem, tente novamente.")
 
     }
-    
+  }
 
 
-  // const url = "https://kanarybackend.discloud.app/usuarios";
-  
-  // await fetch(url)
-  // .then(promisse => promisse.json())
-  // .then(data => console.log(data))
-
-
+    const testeApi = async() =>{
+    const url = "https://kanarybackend.discloud.app/usuarios";
+    await fetch(url)
+    .then(promisse => promisse.json())
+    .then(data => data.map((usuario:string)=>(console.log(usuario))))
     }
-
-
 
 
 
@@ -131,7 +128,9 @@ export function Register() {
                 />
                 <CustomButton children="Cadastrar usuário" />
                 <p>{message}</p>
+
               </form>
+                <p>Botão de debug da api:</p> <button onClick={()=>{testeApi()}} className="cursor-pointer" >Teste api</button>
             </div>
           </div>
         </div>
