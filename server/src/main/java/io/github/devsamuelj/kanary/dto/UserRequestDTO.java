@@ -1,12 +1,12 @@
 package io.github.devsamuelj.kanary.dto;
 
-import io.github.devsamuelj.kanary.entity.EnumTipo;
+import io.github.devsamuelj.kanary.entity.UserType;
 import jakarta.validation.constraints.*;
 
-public class UsuariosDTO {
+public class UserRequestDTO {
 
     @NotBlank(message = "O nome é obrigatório.")
-    private String nome;
+    private String name;
 
     @NotBlank(message = "O e-mail é obrigatório.")
     @Email
@@ -18,18 +18,18 @@ public class UsuariosDTO {
 //            regexp = "^(?=.*[A-Z])(?=.*[a-z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{8,}$",
 //            message = "A senha deve conter letras maiúsculas, minúsculas, números e caracteres especiais."
 //    )
-    private String senha;
+    private String password;
 
     @NotNull(message = "O tipo é obrigatório.")
-    private EnumTipo tipo;
+    private UserType role;
 
 
     // Getters e Setters
-    public String getNome() {
-        return nome;
+    public String getName() {
+        return name;
     }
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getEmail() {
@@ -39,17 +39,17 @@ public class UsuariosDTO {
         this.email = email;
     }
 
-    public String getSenha() {
-        return senha;
+    public String getPassword() {
+        return password;
     }
-    public void setSenha(String senha) {
-        this.senha = senha;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
-    public EnumTipo getTipo() {
-        return tipo;
+    public UserType getRole() {
+        return role;
     }
-    public void setTipo(EnumTipo tipo) {
-        this.tipo = tipo;
+    public void setRole(UserType role) {
+        this.role = role;
     }
 }
