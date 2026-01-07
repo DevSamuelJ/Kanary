@@ -27,7 +27,6 @@ export function Register() {
 
     const handleFormSubmit = async () => {
     console.log("envie essas informações para o servidor");
-    console.log(formData);
 
 
     if (formData.senha === confirmPass){
