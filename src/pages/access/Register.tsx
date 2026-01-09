@@ -11,10 +11,10 @@ export function Register() {
   const [message, setMessage] = useState("")
 
   const [formData, setFormData] = useState({
-    nome: "",
+    name: "",
     email: "",
-    senha: "",
-    tipo: "COLABORADOR"
+    password: "",
+    role: "COLABORADOR"
   });
 
   const [confirmPass, setPass] = useState("")
@@ -29,7 +29,7 @@ export function Register() {
     console.log("envie essas informações para o servidor");
 
 
-    if (formData.senha === confirmPass){
+    if (formData.password === confirmPass){
       setMessage("Logando...")
       console.log(formData)
       const url = "https://kanarybackend.discloud.app/usuarios";
@@ -88,7 +88,7 @@ export function Register() {
                   name="user"
                   placeholder="Nome de usuário"
                   onchange={(e) =>
-                    setFormData({ ...formData, nome: e.target.value })
+                    setFormData({ ...formData, name: e.target.value })
                   }
                   Icon={<SlUser />}
                 />
@@ -107,10 +107,10 @@ export function Register() {
                 {/* div para input de senha */}
                 <Input
                   type="Password"
-                  name="senha"
+                  name="password"
                   placeholder="Senha de cadastro"
                   onchange={(e) =>
-                    setFormData({ ...formData, senha: e.target.value })
+                    setFormData({ ...formData, password: e.target.value })
                   }
                   Icon={<SlLock />}
                 />
@@ -119,7 +119,7 @@ export function Register() {
                 <Input
                   type="Password"
                   name="confirmPassword"
-                  placeholder="Confirme a senha digitada"
+                  placeholder="Confirme a password digitada"
                   onchange={(e) =>
                     setPass(e.target.value)
                   }
