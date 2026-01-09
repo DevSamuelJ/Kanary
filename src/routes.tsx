@@ -6,20 +6,37 @@ import { Register } from "./pages/access/Register";
 
 export const router = createBrowserRouter([
     {
-        path: "Kanary/",
+        path: "/",
         Component: Home,
     },    
     {
-        path: "Kanary/login",
+        path: "/login",
         Component: Login,
     },
     {
-        path: "Kanary/recoverypass",
+        path: "/recoverypass",
         Component: RecoveryPass,
     },
     {
-        path: "Kanary/register",
+        path: "/register",
         Component: Register,
     },
+    {
+        path: "/Kanary/register",
+        Component: Register,
+    },
+    {
+        path: "/Kanary/login",
+        Component: Login,
+    },
+    {
+        path: "/Kanary/recoverypass",
+        Component: RecoveryPass,
+    }
     
 ])
+
+
+
+
+

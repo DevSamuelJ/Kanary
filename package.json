@@ -5,9 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "start": "serve -l tcp://0.0.0.0:8080 ./dist"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.12",
@@ -15,8 +16,10 @@
     "react-dom": "^19.1.1",
     "react-icons": "^5.5.0",
     "react-router": "^7.10.1",
+    "serve": "^14.2.5",
     "tailwind-merge": "^3.4.0",
-    "tailwindcss": "^4.1.12"
+    "tailwindcss": "^4.1.12",
+    "vite": "^7.1.2"
   },
   "devDependencies": {
     "@eslint/js": "^9.33.0",
@@ -31,7 +34,6 @@
     "imagemin-pngquant": "^10.0.0",
     "typescript": "~5.8.3",
     "typescript-eslint": "^8.39.1",
-    "vite": "^7.1.2",
     "vite-plugin-imagemin": "^0.6.1"
   }
 }
