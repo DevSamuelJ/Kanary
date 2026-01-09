@@ -24,7 +24,7 @@ export const RecoveryPass = () => {
           />
           <div className="flex flex-col items-center h-[calc(100%-120px)] justify-center w-[300px]">
             <img
-              src="src/assets/img/logoKanaryWhiteSmall.png"
+              src="/src/assets/img/logoKanaryWhiteSmall.png"
               alt="logolight"
               className="w-[180px] h-[62px]"
             />
