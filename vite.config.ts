@@ -26,7 +26,8 @@ export default defineConfig({
     host: "0.0.0.0",
     // AQUI ESTÁ A CORREÇÃO DO ERRO DA TELA PRETA:
     allowedHosts: [
-      "kanaryfrontend.discloud.app"
+      "kanaryfrontend.discloud.app",
+      "kanary.discloud.app"
     ],
     hmr: {
       overlay: false,
@@ -38,7 +39,8 @@ export default defineConfig({
     port: 8080,
     host: "0.0.0.0",
     allowedHosts: [
-      "kanaryfrontend.discloud.app"
+      "kanaryfrontend.discloud.app",
+      "kanary.discloud.app"
     ],
   },
 
