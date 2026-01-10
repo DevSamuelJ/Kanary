@@ -14,7 +14,7 @@ export function Register() {
     name: "",
     email: "",
     password: "",
-    role: "COLABORADOR"
+    role: "CONTRIBUTOR"
   });
 
   const [confirmPass, setPass] = useState("")
@@ -30,16 +30,18 @@ export function Register() {
 
 
     if (formData.password === confirmPass){
-      setMessage("Logando...")
-      console.log(formData)
-      const url = "https://kanarybackend.discloud.app/usuarios";
-      await fetch(url, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData)
-      })
+
+        const url = "https://kanarybackend.discloud.app/usuarios";
+        await fetch(url, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData)
+        })
+        setMessage("Logando...")
+        console.log(formData)
+
     }else{
       setMessage("A senhas não coincidem, tente novamente.")
 
@@ -53,6 +55,7 @@ export function Register() {
     .then(promisse => promisse.json())
     .then(data => data.map((usuario:string)=>(console.log(usuario))))
     }
+
 
 
 
